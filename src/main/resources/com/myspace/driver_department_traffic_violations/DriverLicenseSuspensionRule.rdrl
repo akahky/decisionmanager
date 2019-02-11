@@ -1,0 +1,14 @@
+package com.myspace.driver_department_traffic_violations;
+
+import java.lang.Number;
+
+rule "DriverLicenseSuspensionRule"
+	dialect "mvel"
+	ruleflow-group "trafficViolation"
+	when
+		driver : Driver( previousPts : totalPoints)
+		Number( totalNewPoints : intValue() >= ( 20-previousPts ) ) from accumulate ( Violation( vPoints : points > 0 ),
+			sum(vPoints)) 
+	then
+		driver.setState( "suspend" );
+end

@@ -1,0 +1,69 @@
+<scenario>
+  <name>Suspend due to total points.scenario</name>
+  <maxRuleFirings>100000</maxRuleFirings>
+  <globals/>
+  <fixtures>
+    <fact-data>
+      <type>Driver</type>
+      <fieldData>
+        <field-data>
+          <name>totalPoints</name>
+          <value>10</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>driver</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <fact-data>
+      <type>Violation</type>
+      <fieldData>
+        <field-data>
+          <name>points</name>
+          <value>10</value>
+          <nature>4</nature>
+        </field-data>
+      </fieldData>
+      <name>violation</name>
+      <isModify>false</isModify>
+    </fact-data>
+    <org.drools.workbench.models.testscenarios.shared.ActivateRuleFlowGroup>
+      <name>trafficViolation</name>
+    </org.drools.workbench.models.testscenarios.shared.ActivateRuleFlowGroup>
+    <execution-trace>
+      <executionTimeResult>11</executionTimeResult>
+      <numberOfRulesFired>1</numberOfRulesFired>
+    </execution-trace>
+    <expect-rule>
+      <ruleName>DriverLicenseSuspensionRule</ruleName>
+      <explanation>Rule [DriverLicenseSuspensionRule] was activated 1 times.</explanation>
+      <expectedFire>true</expectedFire>
+      <successResult>true</successResult>
+      <actualResult>1</actualResult>
+    </expect-rule>
+    <expect-fact>
+      <fieldValues>
+        <expect-field>
+          <fieldName>state</fieldName>
+          <expected>suspend</expected>
+          <successResult>true</successResult>
+          <explanation>[driver] field [state] was [suspend].</explanation>
+          <operator>==</operator>
+          <nature>1</nature>
+        </expect-field>
+      </fieldValues>
+      <name>driver</name>
+      <anonymous>false</anonymous>
+    </expect-fact>
+  </fixtures>
+  <lastRunResult>2019-02-10 21:52:59.973 UTC</lastRunResult>
+  <rules/>
+  <inclusive>false</inclusive>
+  <packageName>com.myspace.driver_department_traffic_violations</packageName>
+  <imports>
+    <imports/>
+  </imports>
+  <ksessions>
+    <string>defaultKieSession</string>
+  </ksessions>
+</scenario>
