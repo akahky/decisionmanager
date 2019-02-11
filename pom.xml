@@ -8,6 +8,38 @@
   <packaging>kjar</packaging>
   <name>Driver_department_traffic_violations</name>
   <description></description>
+  <repositories>
+  <repository>
+    <id>jboss-maven-repository</id>
+    <name>JBoss Maven Repository</name>
+    <url>http://maven.repository.redhat.com/techpreview/all/</url>
+    <layout>default</layout>
+    <releases>
+      <enabled>true</enabled>
+      <updatePolicy>never</updatePolicy>
+    </releases>
+    <snapshots>
+      <enabled>false</enabled>
+      <updatePolicy>never</updatePolicy>
+    </snapshots>
+  </repository>
+</repositories>
+<pluginRepositories>
+  <pluginRepository>
+    <id>jboss-maven-repository</id>
+    <name>JBoss Maven Repository</name>
+    <url>http://maven.repository.redhat.com/techpreview/all/</url>
+    <layout>default</layout>
+    <releases>
+      <enabled>true</enabled>
+      <updatePolicy>never</updatePolicy>
+    </releases>
+    <snapshots>
+      <enabled>false</enabled>
+      <updatePolicy>never</updatePolicy>
+    </snapshots>
+  </pluginRepository>
+</pluginRepositories>
   <dependencies>
     <dependency>
       <groupId>com.thoughtworks.xstream</groupId>
