@@ -6,7 +6,7 @@
   <artifactId>violations</artifactId>
   <version>1.0.0</version>
   <packaging>kjar</packaging>
-  <name>Driver_department_traffic_violations</name>
+  <name>violations</name>
   <description></description>
   <repositories>
   <repository>
