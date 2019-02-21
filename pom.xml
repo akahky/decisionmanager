@@ -86,12 +86,14 @@
   <groupId>org.drools</groupId>
   <artifactId>drools-canonical-model</artifactId>
   <version>7.14.0.Final-redhat-00002</version>
+          <scope>provided</scope>
 </dependency>
 
 <dependency>
   <groupId>org.drools</groupId>
   <artifactId>drools-model-compiler</artifactId>
   <version>7.14.0.Final-redhat-00002</version>
+    <scope>provided</scope>
 </dependency>
   </dependencies>
   <build>
